@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,visualstudiocode,pycharm,vuejs,django,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,visualstudiocode,pycharm,vuejs,django,python
 
@@ -462,3 +463,33 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,visualstudiocode,pycharm,vuejs,django,python
+=======
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+
+/cypress/videos/
+/cypress/screenshots/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+>>>>>>> 7bf93f78e89a217fd8be906c0a40034e553ef258
