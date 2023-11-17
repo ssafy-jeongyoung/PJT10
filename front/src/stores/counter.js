@@ -1,12 +1,23 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-
+import axios from 'axios';
 export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
-  }
 
-  return { count, doubleCount, increment }
+  const exchangeData=ref([])
+  const getExchangeData=function(){
+    axios({
+      method: 'get',
+      url: '/exchange-api?authkey=XPGg7SsCcJbK24AYwIqwaDNrcIOn3nLa&data=AP01'
+    }).then((res) =>{
+
+      exchangeData.value=res.data
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+  const getExchange = computed(()=>{
+    return exchangeData.value
+  })
+  return { exchangeData,getExchangeData, getExchange}
 })

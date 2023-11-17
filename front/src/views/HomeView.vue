@@ -21,7 +21,7 @@
 </script>
 
 <style  scoped>
- .box{
+.box{
   height: 500px;
- }
+}
 </style>
